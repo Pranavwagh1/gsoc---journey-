@@ -1,5 +1,6 @@
-name = "Pranav"
-day = 5 
+day = 6 
 
-print("Hello ",name)
-prin("Today is Day ",day,"of my GSoC journey")
+if day>=5 :
+  print("I am consistent 💪")
+else :
+  print("I need to work Harder")
