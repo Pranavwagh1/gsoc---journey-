@@ -1,6 +1,4 @@
-day = 6 
+def show_progress(day):
+  print("Day",day,"completed successfully 💪")
 
-if day>=5 :
-  print("I am consistent 💪")
-else :
-  print("I need to work Harder")
+show_progress(8)
