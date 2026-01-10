@@ -1,5 +1,13 @@
-def show_progress(day):
-    print("Day", day, "completed successfully 🚀")
+def Check_even_odd(user_input):
 
-for day in range(1, 10):
-    show_progress(day)
+     if(user_input%2 == 0):
+       return "Even Number"
+     else:
+        return "Odd Number"
+
+
+
+user_input = int(input("Enter a numbe to check its even or odd = ")) 
+
+
+print(Check_even_odd(user_input))
