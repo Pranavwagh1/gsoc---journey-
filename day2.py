@@ -1,6 +1,17 @@
-def greet_user(name):
-    return "Hello " + name + ", welcome to Day 10 🚀"
+def grade_based_on_marks(marks):
+    if marks >= 90 :
+        return "Grade A"
 
-user_name = input("Enter your name: ")
-message = greet_user(user_name)
-print(message)
+    elif marks >= 75 :
+       return "Grade B"
+
+    elif marks >= 50 :
+        return "Grade C"
+
+    else : 
+        return "Fail"
+
+
+marks = int(input("Enter your marks = ")) 
+
+print("You got",grade_based_on_marks(marks))
