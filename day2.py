@@ -1,4 +1,6 @@
-def show_progress(day):
-  print("Day",day,"completed successfully 💪")
+def greet_user(name):
+    return "Hello " + name + ", welcome to Day 10 🚀"
 
-show_progress(8)
+user_name = input("Enter your name: ")
+message = greet_user(user_name)
+print(message)
