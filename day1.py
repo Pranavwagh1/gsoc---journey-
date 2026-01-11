@@ -1,13 +1,11 @@
-def Category_acording_to_your_age(age):
-    if age < 13:
-        return "Child"
-    elif age >=13 and age <= 19:
-        return "Teenager"
-    elif age >= 20 and age <= 59 :
-        return "Adult"
-    else : 
-        return "Senior Citizen"
-    
-age = int(input("Enter your age = "))
+marks = [55,95,99,12,43,23,89,23,90]
 
-print("Your category according to your age is",Category_acording_to_your_age(age))
+passed = 0 
+
+for mark in marks:
+    if(mark>=40):
+        passed += 1 
+    else:
+        continue
+
+print(passed)
