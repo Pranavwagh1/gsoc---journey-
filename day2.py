@@ -1,14 +1,14 @@
 marks = [55,95,99,12,43,23,89,23,90]
-passed = 0 ;
+distinction = []
 
-def is_pass(mark):
-    if mark>=40:
-        return True 
+def is_distinction(mark):
+    if mark >= 75 : 
+        return True
     else:
-        return False
-    
-for mark in marks:
-    if is_pass(mark):
-       passed+=1 
+        return False 
 
-print("Passed students =",passed)
+for mark in marks:
+    if is_distinction(mark):
+        distinction.append(mark)
+
+print(distinction)
