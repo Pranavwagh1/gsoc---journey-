@@ -1,10 +1,11 @@
 marks = [55,95,99,12,43,23,89,23,90]
+new_marks = []
 
-distinction = []
+def is_valid_distinction(mark):
+      return mark>=75 and mark<=100
 
-for mark in marks: 
-    if mark >= 75:
-        distinction.append(mark)
+for mark in marks:
+    if is_valid_distinction(mark):
+        new_marks.append(mark)
 
-for i in distinction:
-    print(i)
+print(new_marks)
