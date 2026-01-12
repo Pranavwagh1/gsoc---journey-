@@ -1,14 +1,11 @@
-marks = [55,95,99,12,43,23,89,23,90]
-distinction = []
+ages = [12,16,18,39,67,87,11,1,72,15]
+filtered_ages = []
 
-def is_distinction(mark):
-    if mark >= 75 : 
-        return True
-    else:
-        return False 
+def is_special(age):
+      return age<13 or age>=60
 
-for mark in marks:
-    if is_distinction(mark):
-        distinction.append(mark)
+for age in ages:
+    if is_special(age):
+        filtered_ages.append(age)
 
-print(distinction)
+print(filtered_ages)
