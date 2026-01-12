@@ -1,11 +1,12 @@
-ages = [12,16,18,39,67,87,11,1,72,15]
-filtered_ages = []
+student_marks = {
+    "Pranav" : 90,
+    "Amit" : 40,
+    "Isha" : 87
+}
+passed_students = {}
 
-def is_special(age):
-      return age<13 or age>=60
+for name , mark in student_marks.items():
+   if mark>=75:
+    passed_students[name]=mark
 
-for age in ages:
-    if is_special(age):
-        filtered_ages.append(age)
-
-print(filtered_ages)
+print(passed_students)
