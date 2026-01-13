@@ -1,12 +1,8 @@
-student_marks = {
-    "Pranav" : 90,
-    "Amit" : 40,
-    "Isha" : 87
-}
-passed_students = {}
+students = [
+    {"name": "Pranav", "marks": 90},
+    {"name": "Amit", "marks": 40},
+    {"name": "Isha", "marks": 87}
+]
 
-for name , mark in student_marks.items():
-   if mark>=75:
-    passed_students[name]=mark
-
-print(passed_students)
+for student in students:
+    print("Name:",student['name'],"|| Marks:",student['marks'])
