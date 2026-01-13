@@ -1,15 +1,12 @@
-student_marks = {
-    "Pranav" : 90,
-    "Amit" : 40,
-    "Isha" : 87
-}
-passed_students = {}
+students = [
+    {"name": "Pranav", "marks": 90},
+    {"name": "Amit", "marks": 40},
+    {"name": "Isha", "marks": 87}
+]
+passed_students = []
 
-def is_passed(mark):
-    return mark >= 75
-
-for name , mark in student_marks.items():
-   if is_passed(mark):
-    passed_students[name]=mark
+for student in students:
+    if(student["marks"]>=75):
+       passed_students.append(student)
 
 print(passed_students)
