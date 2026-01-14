@@ -2,29 +2,40 @@ def is_passed(student):
     return student["marks"] >= 75
 
 
+def separate_students(students):
+    passed_students = []
+    failed_students = []
+
+    for student in students:
+        if is_passed(student):
+            passed_students.append(student)
+        else:
+            failed_students.append(student)
+
+    return passed_students, failed_students
+
+
 students = [
     {"name": "Pranav", "marks": 90},
     {"name": "Amit", "marks": 40},
     {"name": "Isha", "marks": 87},
-    {"name": "Rahul", "marks": 65}
+    {"name": "Ishika", "marks": 45},
+    {"name": "Rahul", "marks": 72},
+    {"name": "Sneha", "marks": 95},
+    {"name": "Vikram", "marks": 33},
+    {"name": "Ananya", "marks": 68},
+    {"name": "Rohan", "marks": 55},
+    {"name": "Kavya", "marks": 82},
+    {"name": "Arjun", "marks": 28},
+    {"name": "Zoya", "marks": 91}
 ]
 
-passed_students = []
-failed_students = []
-
-for student in students:
-    if is_passed(student):
-        passed_students.append(student)
-    else:
-        failed_students.append(student)
+passed, failed = separate_students(students)
 
 print("Passed students:")
-for student in passed_students:
+for student in passed:
     print(student["name"])
 
 print("\nFailed students:")
-for student in failed_students:
+for student in failed:
     print(student["name"])
-
-print("\nTotal Passed:", len(passed_students))
-print("Total Failed:", len(failed_students))
