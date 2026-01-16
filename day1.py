@@ -1,4 +1,13 @@
-# Day 35: Minor update – testing safe git workflow
+"""
+Student Result Processing System
+--------------------------------
+Features:
+- Separate passed and failed students
+- Show top performers (90+)
+- Display summary statistics
+
+Author: Pranav Wagh
+"""
 
 students = [
     {"name": "Pranav", "marks": 90},
@@ -15,7 +24,7 @@ students = [
     {"name": "Zoya", "marks": 91}
 ]
 
-def is_passed(student):
+def has_passed(student):
      return student['marks']>=75
 
 
@@ -23,7 +32,7 @@ def separate_students(students):
        passed_students = []
        falied_students=[]
        for student in students:
-          if is_passed(student):
+          if has_passed(student):
                passed_students.append(student)
           else:
                falied_students.append(student)
