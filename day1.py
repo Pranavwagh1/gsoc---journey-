@@ -30,14 +30,14 @@ def has_passed(student):
 
 def separate_students(students):
        passed_students = []
-       falied_students=[]
+       failed_students=[]
        for student in students:
           if has_passed(student):
                passed_students.append(student)
           else:
-               falied_students.append(student)
+               failed_students.append(student)
         
-       return passed_students , falied_students
+       return passed_students , failed_students
 
 
 def generate_report(students) : 
@@ -68,7 +68,8 @@ def generate_report(students) :
     print("Total Students:", total)
     print("Passed:", passed_count)
     print("Failed:", failed_count)
-    print("Pass Percentage:", pass_percentage, "%")
+    print(f"Pass Percentage: {pass_percentage:.2f}%")
+
 
 
 generate_report(students)
