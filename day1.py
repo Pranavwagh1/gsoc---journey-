@@ -43,6 +43,12 @@ def generate_report(students) :
     for i in failed:
         print("-", i["name"])
 
+    print("\n🏆 Top Performers (90+):")
+    for student in students:
+        if student["marks"] >= 90:
+                print("-", student["name"])
+
+
     total = len(students)
     passed_count = len(passed)
     failed_count = len(failed)
