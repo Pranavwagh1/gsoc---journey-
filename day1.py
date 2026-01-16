@@ -9,6 +9,7 @@ Features:
 Author: Pranav Wagh
 """
 
+     
 students = [
     {"name": "Pranav", "marks": 90},
     {"name": "Amit", "marks": 40},
@@ -58,21 +59,14 @@ def generate_report(students) :
                 print("-", student["name"])
 
 
-    total = len(students)
-    passed_count = len(passed)
-    failed_count = len(failed)
-
-    pass_percentage = (passed_count / total) * 100
+    pass_percentage = (len(passed) / len(students)) * 100
 
     print("\n📊 Summary:")
-    print("Total Students:", total)
-    print("Passed:", passed_count)
-    print("Failed:", failed_count)
+    print("Total Students:", len(students))
+    print("Passed:", len(passed))
+    print("Failed:", len(failed))
     print(f"Pass Percentage: {pass_percentage:.2f}%")
 
 
 
 generate_report(students)
-
-
-
