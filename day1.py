@@ -44,7 +44,7 @@ def generate_report(students) :
         print("-", i["name"])
 
     print("\n🏆 Top Performers (90+):")
-    for student in students:
+    for student in passed:
         if student["marks"] >= 90:
                 print("-", student["name"])
 
