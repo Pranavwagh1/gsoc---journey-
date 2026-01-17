@@ -18,13 +18,7 @@ def has_passed(student):
 
 
 def separate_students(students):
-    passed_students = []
-    failed_students = []
-
-    for student in students:
-        if has_passed(student):
-            passed_students.append(student)
-        else:
-            failed_students.append(student)
+    passed_students = [student for student in students if has_passed(student)]
+    failed_students = [student for student in students if not has_passed(student)]
 
     return passed_students, failed_students

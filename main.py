@@ -14,9 +14,9 @@ def generate_report(students):
         print("-", student["name"])
 
     print("\n🏆 Top Performers (90+):")
-    for student in passed:
-        if student["marks"] >= 90:
-            print("-", student["name"])
+    top_performer = [i for i in passed if i['marks']>=90]
+    for i in top_performer:
+        print("-", i["name"])
 
     pass_percentage = (len(passed) / len(students)) * 100
 
