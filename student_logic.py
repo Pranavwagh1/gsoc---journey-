@@ -16,7 +16,7 @@ students = [
 def has_passed(student):
     return student["marks"] >= 75
 
-
+# Split students into passed and failed based on marks
 def separate_students(students):
     passed_students = [student for student in students if has_passed(student)]
     failed_students = [student for student in students if not has_passed(student)]
